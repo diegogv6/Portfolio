@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
+    section {padding: 60px 20px; text-align: center;}
+    h1.section-title {font-size: 3rem; margin-bottom: 30px; position: relative;}
+    h1.section-title::after {content: ''; width: 80px; height: 4px; background: #007bff; display: block; margin: 15px auto 0; border-radius: 2px;}
+    /* About Section */
+    .about-section {background: linear-gradient(to bottom, #f9f9f9, #eaeaea);} 
+    .about-section img {width: 200px; height: 200px; border-radius: 50%; border: 5px solid #ccc; object-fit: cover; margin-bottom: 30px;}
+    .about-text {max-width: 1000px; margin: 0 auto; font-size: 1.2rem; line-height: 1.8; color: #444;}
+    .about-text p span.highlight {font-weight: bold; color: #007bff;}
+    /* Projects Section */
+    .projects-section {background: #fff;}
+    .projects-section .card {margin: 15px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);}
+    .projects-section .card img {border-top-left-radius: 8px; border-top-right-radius: 8px;}
+    /* Skills Section */
+    .skills-section {background: #f4f4f4;}
+    .skills-section .card {padding: 20px; border-radius: 8px; margin: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center;} 
+    .skills-section .card img {width: 80px; height: 80px; margin-bottom: 15px;}
+    /* Contact Section */
+    .contact-section {background: #222; color: #fff;}
+    .contact-info {font-size: 1.2rem; margin-bottom: 30px;}
+    .social-icons a {display: inline-block; margin: 10px; background: white; border-radius: 50%; padding: 15px; transition: background 0.3s;}
+    .social-icons a:hover {background: #ff69b4;}
+    .social-icons img {width: 30px; height: 30px;}
+    /* Navigation Bar */
+    body {scroll-behavior: smooth; margin: 0;}
+    nav.navbar {position: fixed; top: 0; width: 100%; z-index: 1000; background-color: #222; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
+    nav .nav-link {color: #fff; font-weight: 500; margin: 0 10px;}
+    nav .nav-link:hover {color: #f8f9fa;}
+    section {padding: 100px 20px; text-align: center;}
+    h1.section-title {font-size: 3rem; margin-bottom: 30px; position: relative;}
+    h1.section-title::after {content: ''; width: 80px; height: 4px; background: #007bff; display: block; margin: 15px auto 0; border-radius: 2px;}
+    .navbar .navbar-brand {
+    color: white !important;
+}
+
+  </style>
+</head>
+<body>
+  <div id="home"></div>
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h1 class="section-title">About Me</h1>
+    <img src="/Users/diegogabrielvasquezgotopo/Desktop/Data Analyst Portfolio/Images/About/about.jpg" alt="About Me">
+    <div class="about-text">
+      <p>Hello! I’m <span class="highlight">Diego</span>, an <span class="highlight">Industrial Engineer</span> passionate about optimizing processes and turning data into actionable insights.</p>
+      <p>I specialize in <span class="highlight">logistics</span>, <span class="highlight">data analysis</span>, and <span class="highlight">Inventory Management</span>. Through my experience, I have become adept at ensuring alignment with organizational goals and requirements while facilitating streamlined logistical operations and building strategic relationships with internal and external stakeholders.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h1 class="section-title">Projects</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/Projects/1.png" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Project 1</h5>
+              <p class="card-text">I managed an inventory optimization project by applying ABC analysis to optimize profitability and reduce holding costs. Analyzed Irvine Cummins Parts Warehouse inventory, creating a dashboard to visualize slow-moving stock and developing a prioritized return list. Reduced slow-moving inventory from 40% to 10%.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-outline-primary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/Projects/2.png" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">Project 2</h5>
+              <p class="card-text">Using randomly generated data I created this dashboard that provides a comprehensive overview of key demographic, financial, professional, and geographic insights for a group of 35 individuals. Professionally, the group spans multiple sectors, including teaching, health, agriculture, IT, construction, and general work.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-outline-primary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/Projects/3.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">Project 3</h5>
+              <p class="card-text">I designed this dashboard as part of an Excel-based app I built, using randomly generated data to simulate real business performance metrics. It tracks and compares 10 employees across key indicators: total sales, payments received, return on investment (ROI), and hours worked.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-outline-primary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h1 class="section-title">Skills</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="images/skills/1.png" alt="Python">
+            <h5 class="card-title">Python</h5>
+            <p>100 Days of Code: The Complete Python Pro Bootcamp</p>
+            <a href="https://www.udemy.com/course/100-days-of-code">Link to bootcamp</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="images/skills/2.png" alt="Data Visualization">
+            <h5 class="card-title">Data Visualization</h5>
+            <p>Business Intelligence, Data Connectiion, Power Query Basic, Creating Visuals, DAX, Dashboards.</p>
+            <a href="https://www.udemy.com/course/power-bi-dashboard-step-by-step/">Link to course</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="images/skills/3.png" alt="SQL">
+            <h5 class="card-title">Analyze Data with SQL</h5>
+            <p>SQL, Data Science, Command Line, SQLite, Databases, Queries, Tables, and more.</p>
+            <a href="https://www.codecademy.com/learn/paths/analyze-data-with-sql">Link to course</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="images/skills/4.png" alt="Data Storytelling">
+            <h5 class="card-title">Data Gathering</h5>
+            <p>In data science, you need to gather data, extracting, parsing, and scraping data from various sources, both internal and external as a critical first part in the data science pipeline.</p>
+            <a href="https://www.skillsoft.com/course/data-gathering-90bad217-5039-11e7-867a-028372024997">Link to course</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h1 class="section-title">Contact Me</h1>
+    <div class="container">
+      <div class="row contact-info">
+        <div class="col-md-6 mb-3">
+          <i class="bi bi-envelope"></i> diegogv6@gmail.com
+        </div>
+        <div class="col-md-6 mb-3">
+          <i class="bi bi-telephone"></i> (310) 954-7446
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/diegogvg/" data-bs-toggle="tooltip" title="LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+        <a href="#" data-bs-toggle="tooltip" title="GitHub"><img src="icons/github.png" alt="GitHub"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  </script>
+</body>
+</html>
+
+
