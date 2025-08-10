@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventory Optimization Project – Irvine Cummins Parts Warehouse</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    h1 {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    h2 {
+      color: #34495e;
+      border-left: 4px solid #0d6efd;
+      padding-left: 10px;
+      margin-top: 30px;
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #555;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Blog Content -->
+<section class="py-5">
+  <div class="container">
+    <h1 class="text-center mb-4">Inventory Optimization Project – Irvine Cummins Parts Warehouse</h1>
+
+    <p class="lead text-center mb-5">
+      I managed an inventory optimization project using ABC analysis to improve profitability, reduce holding costs, and increase warehouse efficiency. The project targeted slow-moving C and D class inventory, aiming to shift inventory distribution from 61% AB / 39% CD to a new goal of 90% AB / 10% CD.
+    </p>
+
+    <h2>Situation</h2>
+    <p>
+      In 2024, our C&D class (slow-moving) inventory accounted for 39% of total stock, limiting space for fast-moving AB items. The objective was to reduce C&D to 10% of inventory value and reallocate space to AB products, improving product availability and sales.
+    </p>
+
+    <h2>Tasks</h2>
+    <ul>
+      <li>Analyze the entire Irvine CPW inventory database to determine current C and D stock levels.</li>
+      <li>Identify and prioritize high-cost, low-sales C&D products for return to the factory.</li>
+    </ul>
+
+    <h2>Actions</h2>
+    <ol>
+      <li>
+        Developed an interactive Excel dashboard displaying C&D inventory by units on hand and total cost, with a detailed breakdown for the four most important product categories: <strong>Ceco, Onam, FLG, and DRC</strong>.
+      </li>
+      <li>
+        Created a prioritized return list, focusing on products with the lowest sales over the past 12 months, high-cost items, and those occupying significant warehouse space.
+      </li>
+      <li>
+        Recommended setting target stock levels (TSL) to zero for Class D products, and for Class C products, setting TSL as annual quantity sold ÷ 12 (rounded down) to address overstocking.
+      </li>
+      <li>
+        Proposed returning 25% of slow-moving inventory each quarter, with the dashboard identifying the products — by units and cost — that meet each quarterly target.
+      </li>
+    </ol>
+
+    <div class="text-center my-4">
+      <img src="Images/Projects/11.png" alt="Inventory Optimization Dashboard – Part 1" class="img-fluid rounded shadow mb-3">
+      <img src="Images/Projects/12.png" alt="Inventory Optimization Dashboard – Part 2" class="img-fluid rounded shadow">
+    </div>
+
+    <!-- Download Excel Button -->
+    <div class="text-center mb-3">
+      <a href="project1.xlsx" class="btn btn-success btn-lg" download>
+        📥 Download Excel File
+      </a>
+    </div>
+    <p class="text-center text-muted">
+      This Excel file contains the complete C&D inventory analysis, ABC allocation, and prioritized return plan used to achieve the inventory reduction goals.
+    </p>
+
+    <h2>Results</h2>
+    <p>
+      Reduced slow-moving inventory from <strong>39% to 22%</strong> in just 9 months — an 17% decrease. Freed warehouse space allowed us to stock more AB inventory, improving availability of high-demand products and driving increased sales.
+    </p>
+
+    <div class="text-center my-4">
+      <img src="Images/Projects/13.png" alt="Inventory Optimization Dashboard – Part 3" class="img-fluid rounded shadow mb-3">
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
