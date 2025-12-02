@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customers & Products Data Analysis Project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    h1 { font-weight: bold; color: #2c3e50; }
+    h2 { color: #34495e; border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    p, li { font-size: 1.05rem; line-height: 1.7; color: #555; }
+    img { max-width: 100%; height: auto; }
+    .navbar { background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+      /* Dark themed code block */
+    .code-block {
+        background-color: #1e1e1e;
+        color: #dcdcdc;
+        font-family: "Fira Code", "Courier New", monospace;
+        font-size: 0.95rem;
+        border: 1px solid #333;
+        line-height: 1.5;
+        overflow-x: auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .code-block::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .code-block::-webkit-scrollbar-thumb {
+        background: #444;
+        border-radius: 4px;
+    }
+
+    .code-block::-webkit-scrollbar-track {
+        background: #222;
+    }
+
+    pre {
+        margin: 0;
+        white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Blog Content -->
+<section class="py-5">
+  <div class="container">
+
+    <h1 class="text-center mb-4">Customers & Products Data Analysis Project</h1>
+
+    <p class="lead text-center mb-5">
+      This project analyzes a relational database containing customers, orders, and product information from a company that distributes mineral water in different flavors. 
+      Using PostgreSQL, Python, and Plotly, the goal was to extract valuable business insights, visualize trends, 
+      and demonstrate data analysis and dashboard development skills inside a Jupyter Notebook environment.
+    </p>
+
+    <h2>Project Overview</h2>
+    <p>
+      The analysis was performed by connecting PostgreSQL directly to Python using SQLAlchemy, enabling seamless 
+      SQL querying inside the notebook. Pandas was used for data transformation, while Plotly provided interactive 
+      visualizations and dashboards to communicate insights clearly and effectively.
+    </p>
+
+    <h2>Key Objectives</h2>
+    <ul>
+      <li>Connect PostgreSQL data to Python using SQLAlchemy</li>
+      <li>Clean, query, and join multiple relational tables</li>
+      <li>Analyze customer behavior and sales performance</li>
+      <li>Create interactive dashboards using Plotly</li>
+      <li>Apply industrial engineering and data-analytics best practices</li>
+    </ul>
+
+    <h2>Tools & Technologies</h2>
+    <ul>
+      <li><strong>Database:</strong> PostgreSQL, SQL</li>
+      <li><strong>Data Analysis:</strong> Python, Pandas</li>
+      <li><strong>Visualization:</strong> Plotly and Dash</li>
+      <li><strong>Environment:</strong> Jupyter Notebook</li>
+      <li><strong>Version Control:</strong> Git + GitHub</li>
+    </ul>
+
+    <h2>Dataset</h2>
+    <p>The relational schema included the following tables:</p>
+    <ul>
+      <li>✔ Customers</li>
+      <li>✔ Orders</li>
+      <li>✔ Products</li>
+      <li>✔ OrderItem</li>
+      <li>✔ SalesPerson</li>
+    </ul>
+
+    <h2>Analysis Highlights</h2>
+    <p>Some of the key insights generated from the analysis include:</p>
+    <ul>
+      <li>📊 Total sales analysis by year</li>
+      <li>🌎 Number of customers per state (distinct values)</li>
+      <li>🔗 Relationship between orders and customer data through multi-table joins</li>
+      <li>📈 Interactive trend visualizations using Plotly</li>
+    </ul>
+
+    <h2>Project Files</h2>
+    <div class="text-center mb-4">
+      <a href="https://github.com/diegogv6/Customers_and_products" target="_blank" class="btn btn-dark btn-lg">
+        🔗 View GitHub Repository
+      </a>
+    </div>
+
+    <div class="text-center mb-4">
+      <a href="JupyterNotebook.html" target="_blank" class="btn btn-success btn-lg">
+        📘 View Jupyter Notebook
+      </a>
+    </div>
+    <p class="text-center text-muted mb-5">
+      Opens the interactive HTML version of the Jupyter Notebook used for SQL queries, Pandas analysis, and Plotly visualizations.
+    </p>
+
+    <!-- Optional Screenshot -->
+
+    <div class="container my-5">
+        <h3 class="text-center mb-3">🔍 SQL + Python Analysis Example</h3>
+
+        <div class="code-block p-4 rounded">
+    <pre><code class="language-python">
+    # 2️⃣ SQL JOIN: Combine Orders with Customers on customer_id
+    query = """
+    SELECT 
+        c.state,
+        o.totaldue
+    FROM orders o
+    JOIN customers c
+    ON o.customerid = c.customerid;
+    """
+    df = pd.read_sql(query, engine)
+
+    # Group by state and sum total sales
+    sales_by_state = df.groupby('state', as_index=False)['totaldue'].sum()
+
+    # bar chart
+    fig = px.bar(
+        sales_by_state,
+        x='state',
+        y='totaldue',
+        title='💰 Total Sales by State',
+        labels={'state': 'State', 'totaldue': 'Total Sales ($)'},
+        text_auto=True,
+        color='totaldue'
+    )
+
+    fig.show()
+    </code></pre>
+        </div>
+    </div>
+
+    <div class="text-center my-4">
+      <img src="/Users/diegogabrielvasquezgotopo/Desktop/Data Analyst Portfolio/Images/Projects/Screenshot chart.png" class="img-fluid rounded shadow" alt="Notebook Preview">
+    </div>
+
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
